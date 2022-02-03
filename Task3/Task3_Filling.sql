@@ -4,7 +4,7 @@ INSERT INTO `clients` (`ClientID`, `FullName`, `PassportID`, `Address`, `Phone`)
 	(3, 'Petrov Petr Petrovich', '779876412', 'Perm', '89856512312');
 
 
-INSERT INTO `deposits` (`DepositID`, `Name`, `ShelfLife`, `Rate`) VALUES
+INSERT INTO `deposits` (`DepositID`, `Name`, `ShelfLife`, `Rate(%)`) VALUES
 	(1, 'Накопительный (в российских рублях)', 13, 10),
 	(2, 'Капитал (в долларах США)', 18, 7),
 	(3, 'Победа (в белорусских рублях)', 13, 2),
