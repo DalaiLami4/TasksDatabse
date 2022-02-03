@@ -9,6 +9,6 @@ INSERT INTO `routes` (`RouteID`, `CountryID`, `Name`) VALUES
 	(2, 2, 'East route'),
 	(3, 4, 'South route');
 
-INSERT INTO `sales` (`RouteID`, `Purpose`, `TicketPrice`, `NumberSales`, `DateSale`) VALUES
-	(2, 'Relax', 15000, 6, '2020-05-14'),
-	(3, 'Work', 28499, 4, '2021-09-07');
+INSERT INTO `sales` (`SaleID`, `RouteID`, `Purpose`, `TicketPrice`, `NumberSales`, `DateSale`) VALUES
+	(1, 2, 'Relax', 15000, 6, '2020-05-14'),
+	(2, 3, 'Work', 28499, 4, '2021-09-07');
