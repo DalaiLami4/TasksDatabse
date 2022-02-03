@@ -4,10 +4,10 @@ USE `taks3`;
 
 CREATE TABLE IF NOT EXISTS `clients` (
   `ClientID` int(11) NOT NULL AUTO_INCREMENT,
-  `FullName` char(60) NOT NULL DEFAULT '0',
-  `PassportID` char(30) NOT NULL DEFAULT '0',
-  `Address` char(60) NOT NULL DEFAULT '0',
-  `Phone` char(11) NOT NULL DEFAULT '0',
+  `FullName` varchar(60) NOT NULL DEFAULT '0',
+  `PassportID` varchar(30) NOT NULL DEFAULT '0',
+  `Address` varchar(60) NOT NULL DEFAULT '0',
+  `Phone` varchar(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ClientID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `deposits` (
   `DepositID` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(50) NOT NULL,
   `ShelfLife` int(11) NOT NULL DEFAULT 0,
-  `Rate` int(11) NOT NULL DEFAULT 0,
+  `Rate(%)` float(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`DepositID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `ClientID` int(11) NOT NULL,
   `DepositID` int(11) NOT NULL,
   `DateOppening` date NOT NULL,
-  `DateClosing` date NOT NULL,
-  `Sum` int(11) NOT NULL DEFAULT 0,
+  `DateClosing` date DEFAULT NULL,
+  `Sum` decimal(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`AccountNumber`),
   KEY `clientid` (`ClientID`),
   KEY `depositid` (`DepositID`),
