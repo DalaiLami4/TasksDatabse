@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `product_models` (
   `ModelID` int(11) NOT NULL,
   `ModelName` varchar(50) NOT NULL DEFAULT '',
   `ProductID` int(11) NOT NULL DEFAULT 0,
-  `ModelPrice` int(11) NOT NULL DEFAULT 0,
+  `ModelPrice` decimal(20,6) NOT NULL DEFAULT 0,
   PRIMARY KEY (`ModelID`),
   KEY `productid` (`ProductID`),
   CONSTRAINT `productid` FOREIGN KEY (`ProductID`) REFERENCES `product_kinds` (`ProductID`)
