@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `Name` varchar(50) NOT NULL DEFAULT '0',
   `RecieptDate` date NOT NULL,
   `Number` int(11) NOT NULL DEFAULT 0,
-  `WholesalePrice` float NOT NULL DEFAULT 0,
+  `WholesalePrice` decimal NOT NULL DEFAULT 0,
   PRIMARY KEY (`ProductID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `DillerID` int(11) NOT NULL DEFAULT 0,
   `DateSale` date NOT NULL,
   `NumberSold` int(11) NOT NULL DEFAULT 0,
-  `RetailPrice` float NOT NULL DEFAULT 0,
+  `RetailPrice` decimal NOT NULL DEFAULT 0,
   PRIMARY KEY (`SaleID`),
   KEY `productid` (`ProductID`),
   KEY `dillerid` (`DillerID`),
