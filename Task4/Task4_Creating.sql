@@ -23,11 +23,12 @@ CREATE TABLE IF NOT EXISTS `workers` (
 
 
 CREATE TABLE IF NOT EXISTS `completed_works` (
+  `WorkID` int(11) NOT NULL AUTO_INCREMENT,
   `CompanyName` varchar(50) NOT NULL,
   `WorkerID` int(11) NOT NULL,
   `DateOfComplition` date NOT NULL,
   `HoursWorked` int(11) NOT NULL,
-  PRIMARY KEY (`CompanyName`),
+  PRIMARY KEY (`WorkID`),
   KEY `workerid` (`WorkerID`),
   CONSTRAINT `workerid` FOREIGN KEY (`WorkerID`) REFERENCES `workers` (`WorkerID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
