@@ -10,7 +10,7 @@ INSERT INTO `workers` (`WorkerID`, `Category`, `FullName`, `PassportID`, `DOB`, 
 	(3, 2, 'Iosiph Visorionovich Stalin', '78918446', '1995-11-21', '89956324664');
 
 
-INSERT INTO `completed_works` (`CompanyName`, `WorkerID`, `DateOfComplition`, `HoursWorked`) VALUES
-	('Festo', 2, '2022-02-01', 8),
-	('Siemens', 3, '2021-11-27', 4),
-	('Sitno', 1, '2019-06-20', 6);
+INSERT INTO `completed_works` (`WorkID`, `CompanyName`, `WorkerID`, `DateOfComplition`, `HoursWorked`) VALUES
+	(1, 'Festo', 2, '2022-02-01', 8),
+	(2, 'Siemens', 3, '2021-11-27', 4),
+	(3, 'Sitno', 1, '2019-06-20', 6);
