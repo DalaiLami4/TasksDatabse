@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `DepositID` int(11) NOT NULL,
   `DateOppening` date NOT NULL,
   `DateClosing` date DEFAULT NULL,
-  `Sum` decimal(11) NOT NULL DEFAULT 0,
+  `Sum` decimal(10,2) NOT NULL DEFAULT 0,
   PRIMARY KEY (`AccountNumber`),
   KEY `clientid` (`ClientID`),
   KEY `depositid` (`DepositID`),
