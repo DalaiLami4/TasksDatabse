@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `task 1`;
-USE `task 1`;
+CREATE DATABASE IF NOT EXISTS `task1`;
+USE `task1`;
 
 
 CREATE TABLE IF NOT EXISTS `customers` (
