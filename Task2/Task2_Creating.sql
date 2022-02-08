@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `supplies` (
   `DillerID` int(11) DEFAULT NULL,
   `DateOfReceipt` date NOT NULL,
   `Number` int(11) NOT NULL,
-  `WholesalePrice` decimal(10,0) NOT NULL,
+  `WholesalePrice` decimal(10,2) NOT NULL,
   PRIMARY KEY (`SupplyID`),
   KEY `DillerID` (`DillerID`),
   CONSTRAINT `dillersid` FOREIGN KEY (`DillerID`) REFERENCES `dillers` (`DillerID`)
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `ProductID` int(11) NOT NULL DEFAULT 0,
   `DateOfSale` date NOT NULL,
   `NumberSold` int(11) NOT NULL DEFAULT 0,
-  `RetailPrice` decimal(10,0) NOT NULL DEFAULT 0,
+  `RetailPrice` decimal(10,2) NOT NULL DEFAULT 0,
   PRIMARY KEY (`SaleID`),
   KEY `productid` (`ProductID`),
   CONSTRAINT `productid` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ProductID`) ON DELETE NO ACTION ON UPDATE NO ACTION
