@@ -10,7 +10,7 @@ INSERT INTO `recipients` (`RecipientID`, `FullName`, `Address`) VALUES
 	(3, 'Klochkov Vlad Ivanovich', 'Proletarskaya');
 
 
-INSERT INTO `subscriptions` (`SubscriptionID`, `RecipientID`, `PublicationID`, `SubscriptionTerm`, `StartMonth`, `StartYear`) VALUES
-	(1, 1, 3, 12, 5, '2021'),
-	(2, 2, 2, 1, 1, '2022'),
-	(3, 1, 2, 4, 1, '2022');
+INSERT INTO `subscriptions` (`RecipientID`, `PublicationID`, `SubscriptionTerm`, `StartMonth`, `StartYear`) VALUES
+	(1, 3, 12, 5, '2021'),
+	(2, 2, 1, 1, '2022'),
+	(1, 2, 4, 1, '2022');
