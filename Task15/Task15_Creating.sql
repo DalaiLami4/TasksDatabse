@@ -1,6 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `task15` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE IF NOT EXISTS `task15`;
 USE `task15`;
-
 
 CREATE TABLE IF NOT EXISTS `customers` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -67,8 +66,7 @@ CREATE TABLE IF NOT EXISTS `deliveries` (
   `DeliveryTime` time NOT NULL,
   `Address` text NOT NULL,
   `Courier` text NOT NULL,
-  PRIMARY KEY (`OrderID`,`CustomerID`),
-  UNIQUE KEY `OrderID` (`OrderID`),
+  PRIMARY KEY (`OrderID`) USING BTREE,
   KEY `deliv_customer` (`CustomerID`) USING BTREE,
   CONSTRAINT `deliv_customer` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `deliv_order` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
