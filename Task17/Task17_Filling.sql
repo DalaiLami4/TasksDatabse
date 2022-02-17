@@ -10,17 +10,10 @@ INSERT INTO `products` (`ID`, `Name`, `Firm`, `Model`, `Specifications`, `Guaran
 	(3, 'Vacuum cleaner', 'LG', 'DIN34', 'Cleaning', 15, _binary '');
 
 
-INSERT INTO `orders` (`ID`, `Customer`, `ProductID`, `Guarantee`, `DateOfReceipt`) VALUES
-	(1, 'Ivan', 1, 'No', '2022-01-01'),
-	(2, 'Olga', 3, 'Yes', '2022-01-20'),
-	(3, 'Sasha', 3, 'Yes', '2022-02-01');
-
-
-INSERT INTO `repairs` (`EmployeeID`, `OrderID`) VALUES
-	(1, 3),
-	(3, 1),
-	(3, 2),
-	(3, 3);
+INSERT INTO `orders` (`ID`, `Customer`, `ProductID`, `EmployeeID`, `Guarantee`, `DateOfReceipt`) VALUES
+	(1, 'Ivan', 1, 3, 'No', '2022-01-01'),
+	(2, 'Olga', 3, 3, 'Yes', '2022-01-20'),
+	(3, 'Sasha', 3, 1, 'Yes', '2022-02-01');
 
 
 INSERT INTO `execution_of_orders` (`OrderID`, `EmployeeID`, `TypeOfRepair`, `Price`, `DateOfExecution`, `ClientNotification`, `DateOfReceiving`, `PaymentAmount`) VALUES
